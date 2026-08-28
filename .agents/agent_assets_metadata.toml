@@ -1,0 +1,16 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "ed_lVfGUqRCJ5M2UNkAPP"
+uri = "file://dist/CINENOVA-branded.apk"
+type = "unspecified"
+title = "CINENOVA — APK actualizado"
+description = "APK Android reconstruido con el nombre CINENOVA, icono, logo, splash vertical y banner actualizados. Firmado con una clave nueva de recuperación para instalación de prueba."
+logical_id = "11605b4d-a862-4a83-9d93-28feaeb8e1d8"
+content_hash = "sha256:b3ba00abdc8f96a6c5c4a88236a3886404bfbc695c0b5c7cd945a30667fecb5a"
+size = 19441722
+mtime_ms = 1787961277678
+storage_uri = "gcs://replit-rams-assets-kirk/rams/assets/repl:395886a5-1851-416f-bbf2-22230f8eef03/11605b4d-a862-4a83-9d93-28feaeb8e1d8/05ff0acc-6ec6-4be7-9434-2251adcdfa18"
+storage_version_token = "1787961443083582"
+content_type = "application/octet-stream"
