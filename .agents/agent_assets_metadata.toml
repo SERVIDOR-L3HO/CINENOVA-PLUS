@@ -14,3 +14,17 @@ mtime_ms = 1787961277678
 storage_uri = "gcs://replit-rams-assets-kirk/rams/assets/repl:395886a5-1851-416f-bbf2-22230f8eef03/11605b4d-a862-4a83-9d93-28feaeb8e1d8/05ff0acc-6ec6-4be7-9434-2251adcdfa18"
 storage_version_token = "1787961443083582"
 content_type = "application/octet-stream"
+
+[[outputs]]
+id = "hQAjaQX8tu9G3e0p2nR_E"
+uri = "file://dist/CINENOVA-installable.apk"
+type = "unspecified"
+title = "CINENOVA — APK corregida e instalable"
+description = "APK corregida con alineación ZIP y firma Android V1 + V2 + V3. SHA-256: 2d3be345c705a3e5a3983f4f3056c3418634c5b05b39e40769eb96c2e9bebadc"
+logical_id = "601d241b-3d67-4ef2-9afb-c0a5e7d456f6"
+content_hash = "sha256:2d3be345c705a3e5a3983f4f3056c3418634c5b05b39e40769eb96c2e9bebadc"
+size = 19383066
+mtime_ms = 1787963671948
+storage_uri = "gcs://replit-rams-assets-spock/rams/assets/repl:e7e2c232-41bb-427a-88e2-7029bd2bd8d7/601d241b-3d67-4ef2-9afb-c0a5e7d456f6/5f1aa51d-5985-483e-a3fa-b287dd6909d0"
+storage_version_token = "1787963702878353"
+content_type = "application/octet-stream"
