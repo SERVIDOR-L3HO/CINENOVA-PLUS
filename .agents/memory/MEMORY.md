@@ -1,0 +1,1 @@
+- [APK signing continuity](apk-signing.md) — the imported recovery APK has no private keystore, so rebuilt files need a new key unless the owner supplies it.

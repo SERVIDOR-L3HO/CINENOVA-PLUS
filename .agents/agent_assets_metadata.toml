@@ -70,3 +70,17 @@ mtime_ms = 1788021259580
 storage_uri = "gcs://replit-rams-assets-reed/rams/assets/repl:0b56534b-e7f7-44d8-b636-0e780af94592/f63c2f29-2169-45cd-9122-1a4c9cdcd27d/b662094f-d48d-4374-9bd3-efe3f870edcf"
 storage_version_token = "1788021283342009"
 content_type = "application/octet-stream"
+
+[[outputs]]
+id = "w7hNYGm7MVmvJRKa3fRC_"
+uri = "file://dist/CINENOVA-blue-cinenova-top-l3ho.apk"
+type = "unspecified"
+title = "CINENOVA Blue — modal L3HO Interactive"
+description = "APK reconstruido con la imagen de L3HO Interactive y el botón enlazado a https://t.me/l3hointeractive. Mantiene el layout original del modal; está firmado con una nueva clave de recuperación porque la clave privada anterior no está disponible."
+logical_id = "1cb10172-8f7d-4d56-9875-9f1c3092a351"
+content_hash = "sha256:b24e5c01d5fa488adce5cc12366299428aa5ec9c61b2096b61b46a04cafa713c"
+size = 19055454
+mtime_ms = 1788036105692
+storage_uri = "gcs://replit-rams-assets-reed/rams/assets/repl:1b007265-53f7-4725-b8e1-49e0ba45a7e2/1cb10172-8f7d-4d56-9875-9f1c3092a351/9982eaf7-da38-41ec-986f-77e2743ce267"
+storage_version_token = "1788036158291150"
+content_type = "application/octet-stream"
