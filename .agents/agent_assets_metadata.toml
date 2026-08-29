@@ -56,3 +56,17 @@ mtime_ms = 1787966123189
 storage_uri = "gcs://replit-rams-assets-worf/rams/assets/repl:4fd309f7-e5d6-4489-bf74-64d208033b4c/7bfb4146-2860-4027-bde7-9af230676495/98f83bbf-b099-492b-bbf3-b0a483716f36"
 storage_version_token = "1787966135105736"
 content_type = "application/octet-stream"
+
+[[outputs]]
+id = "M71uQT9Wucm1WzUv4YOKQ"
+uri = "file://dist/CINENOVA-blue-cinenova-top.apk"
+type = "unspecified"
+title = "CINENOVA Blue — logo superior actualizado"
+description = "APK de prueba firmado con una clave nueva de recuperación. La imagen de la esquina superior izquierda ahora usa el wordmark CINENOVA que adjuntaste."
+logical_id = "f63c2f29-2169-45cd-9122-1a4c9cdcd27d"
+content_hash = "sha256:f55224b936b76d245278befe6af66a12bb675b03922978b076f26a50626c855a"
+size = 19396657
+mtime_ms = 1788018131889
+storage_uri = "gcs://replit-rams-assets-reed/rams/assets/repl:0b56534b-e7f7-44d8-b636-0e780af94592/f63c2f29-2169-45cd-9122-1a4c9cdcd27d/8d5489f8-6134-4e5f-a76d-dab39c7d4d58"
+storage_version_token = "1788018172572170"
+content_type = "application/octet-stream"
