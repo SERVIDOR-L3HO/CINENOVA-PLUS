@@ -42,3 +42,17 @@ mtime_ms = 1787965503397
 storage_uri = "gcs://replit-rams-assets-worf/rams/assets/repl:4fd309f7-e5d6-4489-bf74-64d208033b4c/09b8ba1f-c460-4c66-8041-e40177ee60c0/2060603e-deeb-45b7-8263-cc262f73af4a"
 storage_version_token = "1787965523974630"
 content_type = "application/octet-stream"
+
+[[outputs]]
+id = "l2Mz17jnun9dTT3CQkKsa"
+uri = "file://dist/CINENOVA-standalone.apk"
+type = "unspecified"
+title = "CINENOVA — instalación independiente"
+description = "Versión firmada para instalarse junto a la app anterior, sin conflicto de paquete. Mantiene el logo CINENOVA y los acentos azules; usa el identificador independiente com.cinenova.mobile."
+logical_id = "7bfb4146-2860-4027-bde7-9af230676495"
+content_hash = "sha256:ac51437f394cde11b371d82f6dd091416be9a7cae3df612b806d108fca956fff"
+size = 19396608
+mtime_ms = 1787966123189
+storage_uri = "gcs://replit-rams-assets-worf/rams/assets/repl:4fd309f7-e5d6-4489-bf74-64d208033b4c/7bfb4146-2860-4027-bde7-9af230676495/98f83bbf-b099-492b-bbf3-b0a483716f36"
+storage_version_token = "1787966135105736"
+content_type = "application/octet-stream"
