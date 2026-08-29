@@ -28,3 +28,17 @@ mtime_ms = 1787963671948
 storage_uri = "gcs://replit-rams-assets-spock/rams/assets/repl:e7e2c232-41bb-427a-88e2-7029bd2bd8d7/601d241b-3d67-4ef2-9afb-c0a5e7d456f6/5f1aa51d-5985-483e-a3fa-b287dd6909d0"
 storage_version_token = "1787963702878353"
 content_type = "application/octet-stream"
+
+[[outputs]]
+id = "vdiJX1xoc6Xy-PKN9RTN8"
+uri = "file://dist/CINENOVA-blue.apk"
+type = "unspecified"
+title = "CINENOVA — APK azul"
+description = "APK recompilado con el wordmark CINENOVA en el encabezado, acentos azules inspirados en el logo y botón de reproducción azul. Está firmado con una clave nueva de recuperación para instalación de prueba; no sustituye la clave original de publicación."
+logical_id = "09b8ba1f-c460-4c66-8041-e40177ee60c0"
+content_hash = "sha256:769600ae305aca5a3bca2cb830f924f9ded9a90c16fd81610204175e1c656d57"
+size = 19396600
+mtime_ms = 1787965503397
+storage_uri = "gcs://replit-rams-assets-worf/rams/assets/repl:4fd309f7-e5d6-4489-bf74-64d208033b4c/09b8ba1f-c460-4c66-8041-e40177ee60c0/2060603e-deeb-45b7-8263-cc262f73af4a"
+storage_version_token = "1787965523974630"
+content_type = "application/octet-stream"
