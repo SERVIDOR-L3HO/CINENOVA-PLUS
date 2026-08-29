@@ -2,9 +2,18 @@
 
 Este proyecto conserva la aplicación Android recuperada desde el APK original.
 
-## Archivo actualizado
+## Archivos actualizados
 
-- `dist/CINENOVA-branded.apk` — APK con el nombre, icono, logo, splash y banner actualizados a CINENOVA.
+- `dist/CINENOVA-player-pro.apk` — APK instalable con el reproductor rediseñado para CINENOVA.
+- `apk-edit/res/layout/media_controller.xml` — fuente de la nueva interfaz del reproductor.
+
+La edición conserva la reproducción ExoPlayer existente y añade una presentación más profesional:
+
+- encabezado con título, descargar y compartir;
+- controles centrales de reproducción, retroceso y avance;
+- barra de progreso con tiempo actual, duración y buffer;
+- controles reales de reproducción aleatoria y repetición;
+- soporte existente para reanudar la posición, gestos de zoom y reproducción en horizontal.
 
 ## Importante
 

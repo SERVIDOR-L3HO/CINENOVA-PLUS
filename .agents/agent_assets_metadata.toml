@@ -98,3 +98,17 @@ mtime_ms = 1788038760288
 storage_uri = "gcs://replit-rams-assets-reed/rams/assets/repl:1b007265-53f7-4725-b8e1-49e0ba45a7e2/613caaea-f881-4f00-a775-812352da5c08/41091a42-48fa-4135-9a3a-8c5eba90a456"
 storage_version_token = "1788038778018963"
 content_type = "application/octet-stream"
+
+[[outputs]]
+id = "Lwy_b1IK9euiv43zIyiyX"
+uri = "file://dist/CINENOVA-player-pro.apk"
+type = "unspecified"
+title = "CINENOVA Player Pro APK"
+description = "APK instalable con el reproductor rediseñado: controles ExoPlayer, barra de progreso mejorada, repetición, aleatorio, descarga, compartir y soporte para reanudar posición. Firmado con la clave de recuperación del proyecto."
+logical_id = "ed718cb1-a5f3-4494-9ea9-21e533a4fdd8"
+content_hash = "sha256:43e889921da0a3e23fc01d28907f945460a0b9367a677579a2a4cf9cd4c53e0c"
+size = 19577582
+mtime_ms = 1788044107463
+storage_uri = "gcs://replit-rams-assets-reed/rams/assets/repl:2fa3df67-f1c2-4c67-ae53-3b2c52491f22/ed718cb1-a5f3-4494-9ea9-21e533a4fdd8/f763d320-b39a-4cb2-b34d-08f512656a41"
+storage_version_token = "1788044152071319"
+content_type = "application/octet-stream"
