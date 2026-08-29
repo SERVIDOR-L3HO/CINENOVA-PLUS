@@ -112,3 +112,17 @@ mtime_ms = 1788044107463
 storage_uri = "gcs://replit-rams-assets-reed/rams/assets/repl:2fa3df67-f1c2-4c67-ae53-3b2c52491f22/ed718cb1-a5f3-4494-9ea9-21e533a4fdd8/f763d320-b39a-4cb2-b34d-08f512656a41"
 storage_version_token = "1788044152071319"
 content_type = "application/octet-stream"
+
+[[outputs]]
+id = "W9SNCGZ4iKfUTXhBNeXq6"
+uri = "file://dist/CINENOVA-glass-info.apk"
+type = "unspecified"
+title = "CINENOVA Glass Info APK"
+description = "APK instalable con la pantalla de información rediseñada: panel glass sobre el póster, degradado de contraste, ficha de valoración, botón de reproducción destacado, tráiler y sinopsis en tarjetas transparentes. Conserva favoritos, compartir, tráiler y reproducción existentes. Firmado con la misma clave de recuperación del reproductor."
+logical_id = "a177a754-ea8f-475e-b1a2-2a586e20f433"
+content_hash = "sha256:4b8dee2f813aea526fd8dcb859ebe7e46d3ff0f7b0fc78cdd29126308999fe89"
+size = 19581356
+mtime_ms = 1788044516743
+storage_uri = "gcs://replit-rams-assets-reed/rams/assets/repl:2fa3df67-f1c2-4c67-ae53-3b2c52491f22/a177a754-ea8f-475e-b1a2-2a586e20f433/3c71d6fc-e8b3-4f9e-8436-6d32f3b00d89"
+storage_version_token = "1788044524167792"
+content_type = "application/octet-stream"

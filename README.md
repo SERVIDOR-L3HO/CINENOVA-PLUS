@@ -5,7 +5,9 @@ Este proyecto conserva la aplicación Android recuperada desde el APK original.
 ## Archivos actualizados
 
 - `dist/CINENOVA-player-pro.apk` — APK instalable con el reproductor rediseñado para CINENOVA.
+- `dist/CINENOVA-glass-info.apk` — APK instalable con la pantalla de información rediseñada con estilo glass.
 - `apk-edit/res/layout/media_controller.xml` — fuente de la nueva interfaz del reproductor.
+- `apk-edit/res/layout/activity_info.xml` — composición glass de la pantalla de información.
 
 La edición conserva la reproducción ExoPlayer existente y añade una presentación más profesional:
 
