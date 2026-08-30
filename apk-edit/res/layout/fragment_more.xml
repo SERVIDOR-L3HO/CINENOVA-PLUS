@@ -25,12 +25,11 @@
             app:popupTheme="@style/AppTheme.PopupOverlay">
             <ImageView
                 android:layout_gravity="center_vertical"
-                android:layout_width="58.0dip"
-                android:layout_height="58.0dip"
-                android:background="@drawable/more_icon_circle"
-                android:padding="7.0dip"
-                android:scaleType="centerInside"
-                android:src="@drawable/logo" />
+                android:layout_width="118.0dip"
+                android:layout_height="54.0dip"
+                android:scaleType="fitCenter"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/cinenova_wordmark" />
             <LinearLayout
                 android:gravity="center_vertical"
                 android:orientation="vertical"

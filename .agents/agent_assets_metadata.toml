@@ -140,3 +140,17 @@ mtime_ms = 1788050665810
 storage_uri = "gcs://replit-rams-assets-spock/rams/assets/repl:0714c777-3f7e-4dcb-be11-563877dce4e8/7cb2452f-e547-479a-9388-95464d1df8b2/d28c19f6-8858-402a-b11e-a6ecad7f8078"
 storage_version_token = "1788050689621337"
 content_type = "application/octet-stream"
+
+[[outputs]]
+id = "_8XrVqldBqiK2Ph2_7mZH"
+uri = "file://dist/CINENOVA-results-glass.apk"
+type = "unspecified"
+title = "CINENOVA — resultados y logo Glass"
+description = "APK actualizado con el logo horizontal de CINENOVA en la parte superior, menú Más conservado en estilo glass y resultados de películas rediseñados con tarjetas translúcidas, poster enmarcado y mejor jerarquía visual. Firmado con la misma clave de recuperación de esta sesión para instalación de prueba."
+logical_id = "1fe066a3-7793-4181-b63c-fc08581664f9"
+content_hash = "sha256:9f43dbd02bdff71746cb06c4ef84e39a69f7bf8139cb6473d865c29c422f8c9c"
+size = 19587223
+mtime_ms = 1788051132953
+storage_uri = "gcs://replit-rams-assets-spock/rams/assets/repl:0714c777-3f7e-4dcb-be11-563877dce4e8/1fe066a3-7793-4181-b63c-fc08581664f9/36f48f3c-29c4-44e9-9993-edf371ab2d91"
+storage_version_token = "1788051155049363"
+content_type = "application/octet-stream"
