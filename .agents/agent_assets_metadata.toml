@@ -126,3 +126,17 @@ mtime_ms = 1788044516743
 storage_uri = "gcs://replit-rams-assets-reed/rams/assets/repl:2fa3df67-f1c2-4c67-ae53-3b2c52491f22/a177a754-ea8f-475e-b1a2-2a586e20f433/3c71d6fc-e8b3-4f9e-8436-6d32f3b00d89"
 storage_version_token = "1788044524167792"
 content_type = "application/octet-stream"
+
+[[outputs]]
+id = "ucyz5kddLhayQ2DHiTORk"
+uri = "file://dist/CINENOVA-more-glass.apk"
+type = "unspecified"
+title = "CINENOVA — menú Más Glass actualizado"
+description = "APK Android reconstruido con el apartado Más rediseñado en estilo glass, soporte enlazado a https://t.me/l3hointeractive y compartir sin enlace de GitHub. Firmado con una clave nueva para instalación de prueba."
+logical_id = "7cb2452f-e547-479a-9388-95464d1df8b2"
+content_hash = "sha256:1cc010364451b26d4514206c40216e9a64b67fa5cde59729f908633ff278a616"
+size = 19584881
+mtime_ms = 1788050665810
+storage_uri = "gcs://replit-rams-assets-spock/rams/assets/repl:0714c777-3f7e-4dcb-be11-563877dce4e8/7cb2452f-e547-479a-9388-95464d1df8b2/d28c19f6-8858-402a-b11e-a6ecad7f8078"
+storage_version_token = "1788050689621337"
+content_type = "application/octet-stream"
