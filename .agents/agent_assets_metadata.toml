@@ -154,3 +154,17 @@ mtime_ms = 1788051132953
 storage_uri = "gcs://replit-rams-assets-spock/rams/assets/repl:0714c777-3f7e-4dcb-be11-563877dce4e8/1fe066a3-7793-4181-b63c-fc08581664f9/36f48f3c-29c4-44e9-9993-edf371ab2d91"
 storage_version_token = "1788051155049363"
 content_type = "application/octet-stream"
+
+[[outputs]]
+id = "SUhQQV2zMRTeKTtNxs_pB"
+uri = "file://dist/CINENOVA-lista-creativa.apk"
+type = "unspecified"
+title = "CINENOVA — carruseles y lista creativa"
+description = "APK reconstruido con carruseles glass, cuadrícula vertical para Todas, títulos visibles y protección contra respuestas de contenido incompletas."
+logical_id = "e94bf294-2380-46bb-a247-85b617f017de"
+content_hash = "sha256:c9449a4dbf4f2219a317b98d91f0915d7170b196221709efb9d649306ec1b4d5"
+size = 19592057
+mtime_ms = 1788064483418
+storage_uri = "gcs://replit-rams-assets-spock/rams/assets/repl:936e8eb9-3653-4871-881b-b4ac370c3ab3/e94bf294-2380-46bb-a247-85b617f017de/3c626501-e8af-41b2-9e44-7f30dd167a30"
+storage_version_token = "1788064491958405"
+content_type = "application/octet-stream"
