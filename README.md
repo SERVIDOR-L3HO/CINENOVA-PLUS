@@ -23,8 +23,6 @@ La edición conserva la reproducción ExoPlayer existente y añade una presentac
 
 La pantalla de inicio ahora combina carruseles con tarjetas glass y una cuadrícula vertical de dos columnas en “Todas”. La carga de contenido también limita cada sección al número real de resultados recibidos y evita intentar mostrar el héroe cuando la respuesta llega vacía.
 
-La nueva sección “Continuar viendo” se alimenta del historial de posiciones del reproductor. Al volver a tocar un título, la app conserva el flujo existente de selección y muestra la opción de continuar desde el punto guardado; la posición se vuelve a guardar al pausar, salir o cerrar el reproductor.
-
 ## Importante
 
 El APK fue reconstruido porque el código fuente original no estaba disponible. Está firmado con una clave nueva de recuperación para instalación de prueba. Para actualizar una instalación existente o publicar una actualización en una tienda, se necesita la clave de firma original de la aplicación.

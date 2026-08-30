@@ -1,2 +1,1 @@
 - [APK signing continuity](apk-signing.md) — the imported recovery APK has no private keystore, so rebuilt files need a new key unless the owner supplies it.
-- [Playback resume identity](playback-resume-identity.md) — saved positions use the player-facing title key, with episode details appended for series.
