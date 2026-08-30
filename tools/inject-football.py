@@ -92,29 +92,42 @@ def main() -> None:
     const/4 v1, 0x0
 """,
     )
-    replace_once(
-        home,
-        """    iput-object v0, p0, Ly3/j;->o0:Lcom/dpsteam/filmplus/tools/n;
-
-    .line 11
-    new-instance v0, Landroid/os/Handler;
-""",
-        """    iput-object v0, p0, Ly3/j;->o0:Lcom/dpsteam/filmplus/tools/n;
-
-    new-instance v0, Lcom/dpsteam/filmplus/tools/FootballFeed;
+    home_text = home.read_text()
+    worker_block = """    new-instance v0, Lcom/dpsteam/filmplus/tools/FootballFeed;
     invoke-direct {v0, p0}, Lcom/dpsteam/filmplus/tools/FootballFeed;-><init>(Ly3/j;)V
     new-instance v1, Ljava/lang/Thread;
     invoke-direct {v1, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
     invoke-virtual {v1}, Ljava/lang/Thread;->start()V
 
-    .line 11
-    new-instance v0, Landroid/os/Handler;
+"""
+    if worker_block in home_text:
+        home.write_text(home_text.replace(worker_block, "", 1))
+
+    delayed_loader = smali / "h7/i2.smali"
+    replace_once(
+        delayed_loader,
+        """    invoke-virtual {v0}, Ly3/j;->R()V
+
+    .line 130
+    goto :goto_2
+""",
+        """    invoke-virtual {v0}, Ly3/j;->R()V
+
+    new-instance v2, Lcom/dpsteam/filmplus/tools/FootballFeed;
+    invoke-direct {v2, v0}, Lcom/dpsteam/filmplus/tools/FootballFeed;-><init>(Ly3/j;)V
+    new-instance v3, Ljava/lang/Thread;
+    invoke-direct {v3, v2}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
+    invoke-virtual {v3}, Ljava/lang/Thread;->start()V
+
+    .line 130
+    goto :goto_2
 """,
     )
 
     click = smali / "z3/e0.smali"
-    replace_once(
-        click,
+    if "0x5f5f" not in click.read_text():
+        replace_once(
+            click,
         """    const/16 v1, 0x1ab9
 
     .line 9
@@ -156,9 +169,10 @@ def main() -> None:
     :normal_media_click
     if-ne v0, v1, :cond_0
 """,
-    )
-    replace_once(
-        click,
+        )
+    if '"const-string v1, "referer"' not in click.read_text():
+        replace_once(
+            click,
         """    invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
     iget-object p1, v2, Lz3/g0;->e:Landroid/content/Context;""",
         """    invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
@@ -166,7 +180,7 @@ def main() -> None:
     const-string v3, "https://ultrago-xi.vercel.app/"
     invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
     iget-object p1, v2, Lz3/g0;->e:Landroid/content/Context;""",
-    )
+        )
 
     card = root / "res/layout/media_raw.xml"
     card_text = card.read_text()

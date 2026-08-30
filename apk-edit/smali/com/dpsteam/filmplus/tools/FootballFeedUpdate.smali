@@ -29,6 +29,8 @@
     iput-object v1, v0, Ly3/j;->x0:Ljava/util/ArrayList;
     iget-object v2, v0, Ly3/j;->p0:Ljava/util/ArrayList;
     if-eqz v2, :done
+    iget-object v2, v0, Ly3/j;->u0:Landroidx/recyclerview/widget/RecyclerView;
+    if-eqz v2, :done
     invoke-virtual {v0}, Ly3/j;->R()V
 
     :done

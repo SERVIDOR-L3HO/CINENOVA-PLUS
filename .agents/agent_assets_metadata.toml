@@ -182,3 +182,17 @@ mtime_ms = 1788100798792
 storage_uri = "gcs://replit-rams-assets-reed/rams/assets/repl:2c1168bf-53f4-4a1d-ab9d-bfccb0b4ceb8/e80a0e3c-76b1-4e86-a5e5-6a526a169799/462e3248-6efa-4393-be05-abcdab14d777"
 storage_version_token = "1788100884836778"
 content_type = "application/octet-stream"
+
+[[outputs]]
+id = "NtofwlJmXzXd1SrNTfQjr"
+uri = "file://dist/CINENOVA-futbol-fixed.apk"
+type = "unspecified"
+title = "CINENOVA — versión corregida"
+description = "APK firmado de recuperación. Corrige el cierre durante el splash iniciando la carga del carrusel de fútbol solo después de que la pantalla principal esté lista. ZIP íntegro y firma verificada."
+logical_id = "1661bf9c-462b-4263-81c3-b054b80b38d3"
+content_hash = "sha256:9d2d4d1b4b1c1949a7e7142eef9c55cce53e94696cfbde9d7b4b0bf2beea7cb3"
+size = 19593847
+mtime_ms = 1788101320456
+storage_uri = "gcs://replit-rams-assets-reed/rams/assets/repl:2c1168bf-53f4-4a1d-ab9d-bfccb0b4ceb8/1661bf9c-462b-4263-81c3-b054b80b38d3/1eacf8b0-36dc-4217-a16f-f42713fef3c1"
+storage_version_token = "1788101330400308"
+content_type = "application/octet-stream"
