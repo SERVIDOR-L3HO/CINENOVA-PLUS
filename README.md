@@ -7,6 +7,8 @@ Este proyecto conserva la aplicación Android recuperada desde el APK original.
 - `dist/CINENOVA-player-pro.apk` — APK instalable con el reproductor rediseñado para CINENOVA.
 - `dist/CINENOVA-glass-info.apk` — APK instalable con la pantalla de información rediseñada con estilo glass.
 - `dist/CINENOVA-lista-creativa.apk` — APK instalable con carruseles renovados y una cuadrícula tipo lista para “Todas”.
+- `dist/CINENOVA-futbol.apk` — APK instalable con el carrusel “FÚTBOL EN VIVO” alimentado por `https://ultrago-xi.vercel.app/gol-3`.
+- `tools/inject-football.py` — inyector reproducible para aplicar la integración al árbol decodificado del APK recuperado.
 - `apk-edit/res/layout/media_controller.xml` — fuente de la nueva interfaz del reproductor.
 - `apk-edit/res/layout/activity_info.xml` — composición glass de la pantalla de información.
 - `apk-edit/res/layout/horizontal_raw.xml` — encabezados y espaciado de las secciones de inicio.
@@ -22,6 +24,14 @@ La edición conserva la reproducción ExoPlayer existente y añade una presentac
 - soporte existente para reanudar la posición, gestos de zoom y reproducción en horizontal.
 
 La pantalla de inicio ahora combina carruseles con tarjetas glass y una cuadrícula vertical de dos columnas en “Todas”. La carga de contenido también limita cada sección al número real de resultados recibidos y evita intentar mostrar el héroe cuando la respuesta llega vacía.
+
+La edición de fútbol:
+
+- carga las transmisiones de forma asíncrona para no bloquear la pantalla principal;
+- filtra eventos que no son fútbol y muestra hasta 18 partidos;
+- intenta resolver las páginas HTML de los canales hasta localizar una fuente HLS `.m3u8`;
+- inserta la sección entre “Recientes” y “Estrenos”;
+- abre los canales reproducibles directamente en el reproductor ExoPlayer existente, con `referer` y manejo de error ya provisto por la actividad nativa.
 
 ## Importante
 

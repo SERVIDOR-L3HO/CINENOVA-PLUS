@@ -168,3 +168,17 @@ mtime_ms = 1788064483418
 storage_uri = "gcs://replit-rams-assets-spock/rams/assets/repl:936e8eb9-3653-4871-881b-b4ac370c3ab3/e94bf294-2380-46bb-a247-85b617f017de/3c626501-e8af-41b2-9e44-7f30dd167a30"
 storage_version_token = "1788064491958405"
 content_type = "application/octet-stream"
+
+[[outputs]]
+id = "WGLIjNqn1vMkG_BOhz8UK"
+uri = "file://dist/CINENOVA-futbol.apk"
+type = "unspecified"
+title = "CINENOVA — FÚTBOL EN VIVO"
+description = "APK instalable firmado con una clave de recuperación. Incluye el carrusel entre Recientes y Estrenos, carga asíncrona del endpoint gol-3, resolución de fuentes HLS y apertura en el reproductor ExoPlayer existente."
+logical_id = "e80a0e3c-76b1-4e86-a5e5-6a526a169799"
+content_hash = "sha256:1a0c148c1379aad6db8ae12483d611ec8b17c4f4caf4436a2a31f56eedec6de2"
+size = 19593970
+mtime_ms = 1788100798792
+storage_uri = "gcs://replit-rams-assets-reed/rams/assets/repl:2c1168bf-53f4-4a1d-ab9d-bfccb0b4ceb8/e80a0e3c-76b1-4e86-a5e5-6a526a169799/462e3248-6efa-4393-be05-abcdab14d777"
+storage_version_token = "1788100884836778"
+content_type = "application/octet-stream"

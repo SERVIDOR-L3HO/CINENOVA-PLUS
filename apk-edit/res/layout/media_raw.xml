@@ -31,4 +31,22 @@
         android:layout_width="wrap_content"
         android:layout_height="22.0dip"
         android:text="CINENOVA" />
+    <TextView
+        android:id="@id/tv_t_search"
+        android:textSize="11.0sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:gravity="bottom"
+        android:layout_gravity="bottom"
+        android:paddingLeft="7.0dip"
+        android:paddingRight="7.0dip"
+        android:paddingBottom="20.0dip"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:layout_width="fill_parent"
+        android:layout_height="48.0dip"
+        android:shadowColor="#ff000000"
+        android:shadowDx="0.0"
+        android:shadowDy="1.0"
+        android:shadowRadius="3.0" />
 </com.dpsteam.filmplus.tools.ui.FocusFixFrameLayout>
