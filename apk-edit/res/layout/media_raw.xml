@@ -20,15 +20,18 @@
         android:background="@drawable/home_poster_scrim"
         android:layout_gravity="bottom"
         android:layout_width="fill_parent"
-        android:layout_height="62.0dip" />
+        android:layout_height="78.0dip" />
     <TextView
-        android:textSize="8.0sp"
+        android:textSize="11.0sp"
         android:textStyle="bold"
         android:textColor="#E6FFFFFF"
-        android:letterSpacing="0.16"
+        android:id="@id/tv_t_search"
+        android:paddingLeft="5.0dip"
+        android:paddingRight="5.0dip"
         android:gravity="center"
         android:layout_gravity="bottom|center_horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="22.0dip"
-        android:text="CINENOVA" />
+        android:layout_width="fill_parent"
+        android:layout_height="34.0dip"
+        android:maxLines="2"
+        android:ellipsize="end" />
 </com.dpsteam.filmplus.tools.ui.FocusFixFrameLayout>
