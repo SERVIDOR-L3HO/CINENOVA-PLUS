@@ -1,10 +1,10 @@
-# CINENOVA BLUE
+# CINENOVA
 
 Este proyecto conserva la aplicación Android recuperada desde el APK original.
 
 ## Archivos actualizados
 
-- `dist/CINENOVA-glass-info-button.apk` — APK instalable de CINENOVA BLUE con el botón “Información” y la selección de dispositivo rediseñados con estilo glass. Incluye el carrusel `FÚTBOL EN VIVO` en las rutas Android y TV.
+- `dist/CINENOVA-glass-info-button.apk` — APK instalable con el botón “Información” rediseñado con estilo glass.
 - `tools/inject-football.py` — inyector reproducible para aplicar la integración al árbol decodificado del APK recuperado.
 - `tools/replace-notification-icon.py` — reemplazo reproducible de las cinco densidades de `ic_stat_name.png`.
 - `tools/replace-toast-logo.py` — reemplazo reproducible de `assets/ToastAndroForever.png`.
