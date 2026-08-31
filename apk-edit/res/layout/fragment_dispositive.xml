@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="7.0dip"
             android:gravity="center"
-            android:text="Selecciona dónde disfrutarás CINENOVA"
+            android:text="Selecciona dónde disfrutarás CINENOVA BLUE"
             android:textColor="#B8D4E3EE"
             android:textSize="13.0sp" />
         <View

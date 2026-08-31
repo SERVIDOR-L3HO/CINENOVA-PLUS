@@ -49,7 +49,7 @@
                     android:textColor="#B9DFF2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Tu espacio CINENOVA" />
+                    android:text="Tu espacio CINENOVA BLUE" />
             </LinearLayout>
         </androidx.appcompat.widget.Toolbar>
 

@@ -30,7 +30,7 @@
         android:layout_gravity="bottom|center_horizontal"
         android:layout_width="wrap_content"
         android:layout_height="22.0dip"
-        android:text="CINENOVA" />
+        android:text="CINENOVA BLUE" />
     <TextView
         android:id="@id/tv_t_search"
         android:textSize="11.0sp"

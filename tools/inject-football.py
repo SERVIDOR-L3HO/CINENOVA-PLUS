@@ -186,11 +186,11 @@ def main() -> None:
     card_text = card.read_text()
     if 'android:id="@id/tv_t_search"' not in card_text:
         title = """    <TextView android:textSize="11.0sp" android:textStyle="bold" android:textColor="@android:color/white" android:gravity="bottom" android:layout_gravity="bottom" android:paddingLeft="7.0dip" android:paddingRight="7.0dip" android:paddingBottom="20.0dip" android:ellipsize="end" android:maxLines="2" android:id="@id/tv_t_search" android:layout_width="fill_parent" android:layout_height="48.0dip" android:shadowColor="#ff000000" android:shadowDx="0.0" android:shadowDy="1.0" android:shadowRadius="3.0" />"""
-        one_line = """    <TextView android:textSize="8.0sp" android:textStyle="bold" android:textColor="#e6ffffff" android:gravity="center" android:layout_gravity="bottom|center" android:layout_width="wrap_content" android:layout_height="22.0dip" android:text="CINENOVA" android:letterSpacing="0.16" />"""
+        one_line = """    <TextView android:textSize="8.0sp" android:textStyle="bold" android:textColor="#e6ffffff" android:gravity="center" android:layout_gravity="bottom|center" android:layout_width="wrap_content" android:layout_height="22.0dip" android:text="CINENOVA BLUE" android:letterSpacing="0.16" />"""
         if one_line in card_text:
             card_text = card_text.replace(one_line, title + "\n" + one_line, 1)
         else:
-            legacy_line = '        android:text="CINENOVA" />'
+            legacy_line = '        android:text="CINENOVA BLUE" />'
             if legacy_line not in card_text:
                 raise SystemExit(f"Expected card anchor was not found: {card}")
             card_text = card_text.replace(legacy_line, title + "\n" + legacy_line, 1)

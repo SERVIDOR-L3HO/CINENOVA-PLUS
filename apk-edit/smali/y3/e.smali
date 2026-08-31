@@ -147,7 +147,7 @@
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
 
     .line 97
-    const-string p1, "CINENOVA es algo mejor: disfruta tus pel\u00edculas y series favoritas con una experiencia r\u00e1pida, c\u00f3moda y hecha para ti. \u00a1Comp\u00e1rtelo!"
+    const-string p1, "CINENOVA BLUE es algo mejor: disfruta tus pel\u00edculas y series favoritas con una experiencia r\u00e1pida, c\u00f3moda y hecha para ti. \u00a1Comp\u00e1rtelo!"
 
     .line 111
     const-string v1, "android.intent.extra.TEXT"
