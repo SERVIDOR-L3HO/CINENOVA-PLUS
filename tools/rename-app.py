@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import re
 from pathlib import Path
 
 
@@ -21,7 +22,7 @@ def replace_once(path: Path, old: str, new: str) -> None:
 
 def replace_in_file(path: Path, old: str, new: str) -> None:
     text = path.read_text()
-    updated = text.replace(old, new)
+    updated = re.sub(r"CINENOVA(?! BLUE)", new, text)
     if updated != text:
         path.write_text(updated)
 
