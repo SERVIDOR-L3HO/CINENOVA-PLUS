@@ -22,15 +22,31 @@
 
 # virtual methods
 .method public final run()V
-    .locals 3
+    .locals 5
 
     iget-object v0, p0, Lcom/dpsteam/filmplus/tools/FootballFeedUpdate;->fragment:Ly3/j;
     iget-object v1, p0, Lcom/dpsteam/filmplus/tools/FootballFeedUpdate;->items:Ljava/util/ArrayList;
-    iput-object v1, v0, Ly3/j;->x0:Ljava/util/ArrayList;
+
+    if-eqz v1, :done
+    invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
+    move-result v2
+    if-eqz v2, :has_items
+    goto :done
+
+    :has_items
     iget-object v2, v0, Ly3/j;->p0:Ljava/util/ArrayList;
     if-eqz v2, :done
-    iget-object v2, v0, Ly3/j;->u0:Landroidx/recyclerview/widget/RecyclerView;
-    if-eqz v2, :done
+    invoke-virtual {v2}, Ljava/util/ArrayList;->isEmpty()Z
+    move-result v4
+    if-eqz v4, :add_section
+    goto :done
+
+    :add_section
+    new-instance v3, Lcom/dpsteam/filmplus/objects/CustomList;
+    const-string v4, "FÚTBOL EN VIVO"
+    invoke-direct {v3, v4, v1}, Lcom/dpsteam/filmplus/objects/CustomList;-><init>(Ljava/lang/String;Ljava/util/ArrayList;)V
+    const/4 v4, 0x1
+    invoke-virtual {v2, v4, v3}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
     invoke-virtual {v0}, Ly3/j;->R()V
 
     :done
