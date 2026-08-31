@@ -9,8 +9,10 @@ Este proyecto conserva la aplicación Android recuperada desde el APK original.
 - `dist/CINENOVA-lista-creativa.apk` — APK instalable con carruseles renovados y una cuadrícula tipo lista para “Todas”.
 - `dist/CINENOVA-futbol.apk` — APK instalable con el carrusel “FÚTBOL EN VIVO” alimentado por `https://ultrago-xi.vercel.app/gol-3`.
 - `dist/CINENOVA-notification-icon.apk` — APK instalable con el icono de notificaciones actualizado.
+- `dist/CINENOVA-toast-logo.apk` — APK instalable con el icono de notificaciones y el logotipo de bienvenida actualizados.
 - `tools/inject-football.py` — inyector reproducible para aplicar la integración al árbol decodificado del APK recuperado.
 - `tools/replace-notification-icon.py` — reemplazo reproducible de las cinco densidades de `ic_stat_name.png`.
+- `tools/replace-toast-logo.py` — reemplazo reproducible de `assets/ToastAndroForever.png`.
 - `apk-edit/res/layout/media_controller.xml` — fuente de la nueva interfaz del reproductor.
 - `apk-edit/res/layout/activity_info.xml` — composición glass de la pantalla de información.
 - `apk-edit/res/layout/horizontal_raw.xml` — encabezados y espaciado de las secciones de inicio.

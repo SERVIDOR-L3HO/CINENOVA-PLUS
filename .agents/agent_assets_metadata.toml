@@ -210,3 +210,17 @@ mtime_ms = 1788144618182
 storage_uri = "gcs://replit-rams-assets-reed/rams/assets/repl:03603745-5338-4da2-bbb2-244897e8fdf7/1d2a10f4-9d4e-48a7-84b1-8fb7c3f38ccf/0f74d53c-784b-4858-b951-bc0e30bc59eb"
 storage_version_token = "1788144659678784"
 content_type = "application/octet-stream"
+
+[[outputs]]
+id = "kJq9IUa4Xs7G9MJaps4zE"
+uri = "file://dist/CINENOVA-toast-logo.apk"
+type = "unspecified"
+title = "CINENOVA — APK con icono de notificaciones y bienvenida actualizados"
+description = "APK firmado de prueba con el carrete usado como icono de notificaciones y como logotipo de la burbuja “Bienvenido L3HOINTERACTIVE”."
+logical_id = "a2719a97-9dd9-42e3-9851-c63099525dcc"
+content_hash = "sha256:61bd4e1c416cd5a91e23a3d68448f35d8b2fc57a63d1860fc34abeef9d1e938a"
+size = 19604240
+mtime_ms = 1788145635674
+storage_uri = "gcs://replit-rams-assets-reed/rams/assets/repl:03603745-5338-4da2-bbb2-244897e8fdf7/a2719a97-9dd9-42e3-9851-c63099525dcc/93390138-8b55-404a-9bd7-6a8ee1a82e23"
+storage_version_token = "1788145664757805"
+content_type = "application/octet-stream"
