@@ -104,9 +104,11 @@ def main() -> None:
         home.write_text(home_text.replace(worker_block, "", 1))
 
     delayed_loader = smali / "h7/i2.smali"
-    replace_once(
-        delayed_loader,
-        """    invoke-virtual {v0}, Ly3/j;->R()V
+    delayed_text = delayed_loader.read_text()
+    if "FootballFeed;-><init>(Ly3/j;)" not in delayed_text:
+        replace_once(
+            delayed_loader,
+            """    invoke-virtual {v0}, Ly3/j;->R()V
 
     .line 130
     goto :goto_2
@@ -122,7 +124,21 @@ def main() -> None:
     .line 130
     goto :goto_2
 """,
-    )
+        )
+
+    delayed_text = delayed_loader.read_text()
+    if "FootballFeed;-><init>(Ly3/i;)" not in delayed_text:
+        android_anchor = "    invoke-virtual {v0}, Ly3/i;->S()V\n"
+        android_worker = """    new-instance v2, Lcom/dpsteam/filmplus/tools/FootballFeed;
+    invoke-direct {v2, v0}, Lcom/dpsteam/filmplus/tools/FootballFeed;-><init>(Ly3/i;)V
+    new-instance v3, Ljava/lang/Thread;
+    invoke-direct {v3, v2}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
+    invoke-virtual {v3}, Ljava/lang/Thread;->start()V
+
+"""
+        if android_anchor not in delayed_text:
+            raise SystemExit(f"Expected Android loader anchor was not found: {delayed_loader}")
+        delayed_loader.write_text(delayed_text.replace(android_anchor, android_anchor + android_worker, 1))
 
     click = smali / "z3/e0.smali"
     if "0x5f5f" not in click.read_text():
@@ -199,6 +215,7 @@ def main() -> None:
     for rel in (
         "smali/com/dpsteam/filmplus/tools/FootballFeed.smali",
         "smali/com/dpsteam/filmplus/tools/FootballFeedUpdate.smali",
+        "smali/com/dpsteam/filmplus/tools/FootballFeedAndroidUpdate.smali",
     ):
         source = Path(__file__).resolve().parents[1] / "apk-edit" / rel
         destination = root / rel

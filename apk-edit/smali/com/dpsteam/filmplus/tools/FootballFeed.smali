@@ -6,14 +6,22 @@
 .implements Ljava/lang/Runnable;
 
 # instance fields
-.field private final fragment:Ly3/j;
+.field private final fragment:Ljava/lang/Object;
 
 # direct methods
 .method public constructor <init>(Ly3/j;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-    iput-object p1, p0, Lcom/dpsteam/filmplus/tools/FootballFeed;->fragment:Ly3/j;
+    iput-object p1, p0, Lcom/dpsteam/filmplus/tools/FootballFeed;->fragment:Ljava/lang/Object;
+    return-void
+.end method
+
+.method public constructor <init>(Ly3/i;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lcom/dpsteam/filmplus/tools/FootballFeed;->fragment:Ljava/lang/Object;
     return-void
 .end method
 
@@ -282,9 +290,18 @@
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
     move-result-object v1
     invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
-    new-instance v1, Lcom/dpsteam/filmplus/tools/FootballFeedUpdate;
-    iget-object v3, p0, Lcom/dpsteam/filmplus/tools/FootballFeed;->fragment:Ly3/j;
-    invoke-direct {v1, v3, v2}, Lcom/dpsteam/filmplus/tools/FootballFeedUpdate;-><init>(Ly3/j;Ljava/util/ArrayList;)V
+     iget-object v3, p0, Lcom/dpsteam/filmplus/tools/FootballFeed;->fragment:Ljava/lang/Object;
+     instance-of v4, v3, Ly3/i;
+     if-eqz v4, :post_tv_update
+     new-instance v1, Lcom/dpsteam/filmplus/tools/FootballFeedAndroidUpdate;
+     check-cast v3, Ly3/i;
+     invoke-direct {v1, v3, v2}, Lcom/dpsteam/filmplus/tools/FootballFeedAndroidUpdate;-><init>(Ly3/i;Ljava/util/ArrayList;)V
+     goto :post_update
+     :post_tv_update
+     new-instance v1, Lcom/dpsteam/filmplus/tools/FootballFeedUpdate;
+     check-cast v3, Ly3/j;
+     invoke-direct {v1, v3, v2}, Lcom/dpsteam/filmplus/tools/FootballFeedUpdate;-><init>(Ly3/j;Ljava/util/ArrayList;)V
+     :post_update
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :feed_error
