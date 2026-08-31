@@ -186,7 +186,7 @@ def main() -> None:
     if-ne v0, v1, :cond_0
 """,
         )
-    if '"const-string v1, "referer"' not in click.read_text():
+    if '"referer"' not in click.read_text():
         replace_once(
             click,
         """    invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;

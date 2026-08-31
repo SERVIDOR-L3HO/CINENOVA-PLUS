@@ -1,2 +1,3 @@
 - [APK signing continuity](apk-signing.md) — the imported recovery APK has no private keystore, so rebuilt files need a new key unless the owner supplies it.
 - [APK build tools](apk-build-tools.md) — this runner may lack apksigner and zipalign; validate rebuilt APKs with the available Java signing path.
+- [Android and TV feeds](android-football-feed.md) — Android and TV use separate home fragments, so feed updates must target each adapter path explicitly.
