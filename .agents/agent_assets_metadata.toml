@@ -224,3 +224,17 @@ mtime_ms = 1788145635674
 storage_uri = "gcs://replit-rams-assets-reed/rams/assets/repl:03603745-5338-4da2-bbb2-244897e8fdf7/a2719a97-9dd9-42e3-9851-c63099525dcc/93390138-8b55-404a-9bd7-6a8ee1a82e23"
 storage_version_token = "1788145664757805"
 content_type = "application/octet-stream"
+
+[[outputs]]
+id = "gQkysSYh1d3Oiry4CdSUJ"
+uri = "file://dist/CINENOVA-glass-info-button.apk"
+type = "unspecified"
+title = "CINENOVA — botón Información con estilo glass"
+description = "APK firmado de prueba con el botón INFORMACIÓN rediseñado como cápsula glass, icono blanco, borde luminoso y estado táctil. Conserva los cambios anteriores de notificaciones y bienvenida."
+logical_id = "9edb1133-68c7-4a0a-9934-e4a0690852de"
+content_hash = "sha256:6fdbd81052bc90f67d0cf47590586c8de43fd02b50c5bb81ec5641066790bdcb"
+size = 19604800
+mtime_ms = 1788148369923
+storage_uri = "gcs://replit-rams-assets-reed/rams/assets/repl:03603745-5338-4da2-bbb2-244897e8fdf7/9edb1133-68c7-4a0a-9934-e4a0690852de/413aa4ce-9bad-4822-aacc-a58932162f4f"
+storage_version_token = "1788148393457532"
+content_type = "application/octet-stream"
