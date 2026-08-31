@@ -196,3 +196,17 @@ mtime_ms = 1788101320456
 storage_uri = "gcs://replit-rams-assets-reed/rams/assets/repl:2c1168bf-53f4-4a1d-ab9d-bfccb0b4ceb8/1661bf9c-462b-4263-81c3-b054b80b38d3/1eacf8b0-36dc-4217-a16f-f42713fef3c1"
 storage_version_token = "1788101330400308"
 content_type = "application/octet-stream"
+
+[[outputs]]
+id = "m-VQCFidS70jUbG-qVt3o"
+uri = "file://dist/CINENOVA-notification-icon.apk"
+type = "unspecified"
+title = "CINENOVA — APK con icono de notificaciones actualizado"
+description = "APK firmado de prueba con la imagen adjunta adaptada como ic_stat_name en las cinco densidades Android. El APK original se conserva sin cambios."
+logical_id = "1d2a10f4-9d4e-48a7-84b1-8fb7c3f38ccf"
+content_hash = "sha256:6706cd0539ba2429c9d66b75cc6dddb17906f0a4c4d8d15e6d9366444964145f"
+size = 19602691
+mtime_ms = 1788144618182
+storage_uri = "gcs://replit-rams-assets-reed/rams/assets/repl:03603745-5338-4da2-bbb2-244897e8fdf7/1d2a10f4-9d4e-48a7-84b1-8fb7c3f38ccf/0f74d53c-784b-4858-b951-bc0e30bc59eb"
+storage_version_token = "1788144659678784"
+content_type = "application/octet-stream"
