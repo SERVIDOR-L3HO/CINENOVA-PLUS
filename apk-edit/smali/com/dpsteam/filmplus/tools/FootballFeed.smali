@@ -238,13 +238,6 @@
     :channel_done
     if-eqz v10, :event_loop
 
-    const/4 v11, 0x0
-    invoke-static {v10, v11}, Lcom/dpsteam/filmplus/tools/FootballFeed;->resolveStream(Ljava/lang/String;I)Ljava/lang/String;
-    move-result-object v11
-    if-eqz v11, :keep_original
-    move-object v10, v11
-    :keep_original
-
     new-instance v11, Lcom/dpsteam/filmplus/objects/Media;
     invoke-direct {v11}, Lcom/dpsteam/filmplus/objects/Media;-><init>()V
     const-string v12, "fecha"
