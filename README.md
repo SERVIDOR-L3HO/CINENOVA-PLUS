@@ -34,7 +34,7 @@ La edición de fútbol:
 - intenta resolver las páginas HTML de los canales hasta localizar una fuente HLS `.m3u8`;
 - inserta la sección entre “Recientes” y “Estrenos”;
 - inserta y refresca el carrusel tanto en la pantalla Android normal como en la pantalla TV;
-- abre los canales reproducibles directamente en el reproductor ExoPlayer existente, con `referer` y manejo de error ya provisto por la actividad nativa.
+- abre los canales reproducibles directamente en el reproductor ExoPlayer existente desde Android y TV, con `referer` y manejo de error ya provisto por la actividad nativa.
 
 ## Servidores con identidad CINENOVA BLUE
 

@@ -199,6 +199,49 @@ def main() -> None:
             )
         )
 
+    android_click = smali / "z3/b0.smali"
+    android_click_text = android_click.read_text()
+    if "0x5f5f" not in android_click_text:
+        marker = "    iget-object v2, p0, Lz3/b0;->b:Lz3/s;"
+        android_worker = """    const/16 v3, 0x5f5f
+    if-ne v0, v3, :cond_0
+    new-instance v0, Landroid/content/Intent;
+    iget-object v1, v2, Lz3/s;->f:Ljava/lang/Object;
+    check-cast v1, Landroid/content/Context;
+    const-class v3, Lcom/dpsteam/filmplus/activities/MediaActivity;
+    invoke-direct {v0, v1, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+    const-string v1, "video"
+    invoke-virtual {p1}, Lcom/dpsteam/filmplus/objects/Media;->getStreamUrl()Ljava/lang/String;
+    move-result-object v3
+    invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    const-string v1, "isVideo"
+    const/4 v3, 0x1
+    invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+    const-string v1, "isLocal"
+    const/4 v3, 0x0
+    invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+    const-string v1, "id"
+    invoke-virtual {p1}, Lcom/dpsteam/filmplus/objects/Media;->getTitle()Ljava/lang/String;
+    move-result-object v3
+    invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    const-string v1, "referer"
+    const-string v3, "https://ultrago-xi.vercel.app/"
+    invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    iget-object p1, v2, Lz3/s;->f:Ljava/lang/Object;
+    check-cast p1, Landroid/content/Context;
+    invoke-virtual {p1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+    return-void
+"""
+        if marker not in android_click_text:
+            raise SystemExit(f"Expected Android click anchor was not found: {android_click}")
+        android_click.write_text(
+            android_click_text.replace(
+                marker,
+                marker + "\n\n" + android_worker.rstrip(),
+                1,
+            )
+        )
+
     card = root / "res/layout/media_raw.xml"
     card_text = card.read_text()
     if 'android:id="@id/tv_t_search"' not in card_text:
