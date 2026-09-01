@@ -113,6 +113,32 @@ ICONS = {
 """,
 }
 
+LANGUAGE_ICONS = {
+    # A subtitle badge instead of a tiny literal "SUB" bitmap.
+    "ic_sub.png": """
+<rect x="116" y="142" width="280" height="214" rx="58" fill="#173C59" stroke="#65D9FF" stroke-width="12"/>
+<path d="M174 374 214 344h126" fill="none" stroke="#65D9FF" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M168 214h176M168 274h128" stroke="#DDF7FF" stroke-width="22" stroke-linecap="round"/>
+<circle cx="364" cy="274" r="13" fill="#FFC857"/>
+""",
+    # A regional-language badge for Latino audio, not a misleading country flag.
+    "ic_lat.png": """
+<circle cx="256" cy="252" r="126" fill="#173C59" stroke="#65E6B4" stroke-width="12"/>
+<path d="M130 252h252M256 126c-42 38-64 80-64 126s22 88 64 126M256 126c42 38 64 80 64 126s-22 88-64 126" fill="none" stroke="#DDF7FF" stroke-width="12"/>
+<path d="M151 190c32-26 70-40 105-40s73 14 105 40M151 314c32 26 70 40 105 40s73-14 105-40" fill="none" stroke="#65E6B4" stroke-width="12"/>
+<path d="m256 154 14 30 33 4-25 22 7 33-29-17-29 17 7-33-25-22 33-4z" fill="#FFC857"/>
+""",
+    # Castellano is represented by a clean Spain flag with a cinema reel mark.
+    "ic_es.png": """
+<rect x="112" y="142" width="288" height="220" rx="24" fill="#D8314C" stroke="#DDF7FF" stroke-width="10"/>
+<rect x="112" y="202" width="288" height="100" fill="#FFC857"/>
+<circle cx="256" cy="252" r="35" fill="#D8314C" stroke="#FFE6A6" stroke-width="8"/>
+<circle cx="256" cy="252" r="10" fill="#FFC857"/>
+<circle cx="256" cy="182" r="10" fill="#DDF7FF"/>
+<circle cx="256" cy="322" r="10" fill="#DDF7FF"/>
+""",
+}
+
 
 def main() -> None:
     parser = argparse.ArgumentParser()
@@ -122,17 +148,19 @@ def main() -> None:
 
     with tempfile.TemporaryDirectory(prefix="cinenova-server-icons-") as temporary:
         temporary = Path(temporary)
-        for filename, body in ICONS.items():
+        for filename, body in {**ICONS, **LANGUAGE_ICONS}.items():
             svg = temporary / filename.replace(".png", ".svg")
             svg.write_text(svg_icon(body))
             subprocess.run(
                 [
                     "magick",
-                    str(svg),
                     "-background",
                     "none",
+                    str(svg),
                     "-resize",
                     "512x512",
+                    "-alpha",
+                    "on",
                     f"PNG32:{args.output_directory / filename}",
                 ],
                 check=True,

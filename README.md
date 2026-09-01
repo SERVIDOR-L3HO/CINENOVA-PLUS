@@ -52,6 +52,8 @@ Los servidores conservan sus claves internas para mantener el enrutamiento, pero
 - `Hydra` → `HydraFrame`
 - `Cerberus` → `GuardReel`
 
+Los indicadores de idioma también son PNG propios: `Latino` usa un emblema regional, `Subtitulado` un badge de subtítulos y `Castellano` una bandera española rediseñada con detalle de carrete. Todos se generan con transparencia para evitar cuadros blancos.
+
 ## Importante
 
 El APK fue reconstruido porque el código fuente original no estaba disponible. Está firmado con una clave nueva de recuperación para instalación de prueba. Para actualizar una instalación existente o publicar una actualización en una tienda, se necesita la clave de firma original de la aplicación.
