@@ -252,3 +252,17 @@ mtime_ms = 1788233207603
 storage_uri = "gcs://replit-rams-assets-janeway/rams/assets/repl:1a799718-66ad-4103-9468-3d75985a2c92/4e93b4cc-843d-4a8b-9afe-34cccc1889b3/09cb7293-af76-4809-9d42-4ba82b11f536"
 storage_version_token = "1788233214220032"
 content_type = "application/octet-stream"
+
+[[outputs]]
+id = "lpLC4ge0VZHwLSis_VSyq"
+uri = "file://CINENOVA-BLUE2_android-football-fixed.apk"
+type = "unspecified"
+title = "CINENOVA BLUE — APK Android corregido"
+description = "Versión de prueba con el carrusel de fútbol habilitado en Android y resolución de enlaces del reproductor. Está firmada con una clave de recuperación nueva; debe instalarse como aplicación nueva si la instalación anterior usa otra firma."
+logical_id = "823721b3-fcdf-44c9-9736-747b1cd0ec07"
+content_hash = "sha256:41b075804492c8c1d2169a18fd6b6d9130276fd926cc83a7f22258ff3c555ad1"
+size = 20111333
+mtime_ms = 1788273964352
+storage_uri = "gcs://replit-rams-assets-reed/rams/assets/repl:827fa451-ca0d-4dbf-81f8-957a123c0ee0/823721b3-fcdf-44c9-9736-747b1cd0ec07/86665673-9658-4798-b5bf-2f898124c46c"
+storage_version_token = "1788274018775158"
+content_type = "application/octet-stream"
