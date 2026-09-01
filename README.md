@@ -6,6 +6,8 @@ Este proyecto conserva la aplicación Android recuperada desde el APK original.
 
 - `dist/CINENOVA-BLUE.apk` — APK instalable con el nombre visible “CINENOVA BLUE” y el botón “Información” rediseñado con estilo glass.
 - `tools/rename-app.py` — actualización reproducible del nombre visible de la app y del canal de notificaciones.
+- `tools/brand-servers.py` — renombrado visual de los servidores y aplicación de sus iconos cinematográficos.
+- `tools/generate-server-icons.py` — generador reproducible de iconos PNG con la identidad azul de CINENOVA.
 - `tools/inject-football.py` — inyector reproducible para aplicar la integración al árbol decodificado del APK recuperado.
 - `tools/replace-notification-icon.py` — reemplazo reproducible de las cinco densidades de `ic_stat_name.png`.
 - `tools/replace-toast-logo.py` — reemplazo reproducible de `assets/ToastAndroForever.png`.
@@ -32,6 +34,23 @@ La edición de fútbol:
 - intenta resolver las páginas HTML de los canales hasta localizar una fuente HLS `.m3u8`;
 - inserta la sección entre “Recientes” y “Estrenos”;
 - abre los canales reproducibles directamente en el reproductor ExoPlayer existente, con `referer` y manejo de error ya provisto por la actividad nativa.
+
+## Servidores con identidad CINENOVA BLUE
+
+Los servidores conservan sus claves internas para mantener el enrutamiento, pero ahora se muestran con nombres e iconos propios de una app de cine:
+
+- `Ultra` → `CineFlow`
+- `Zeus` → `TitanReel`
+- `Fast` → `FlashReel`
+- `Pegasus` → `SkyReel`
+- `Turbo` → `TurboFrame`
+- `Ares` → `ActionReel`
+- `Poseidon` → `AquaReel`
+- `Vip` → `LuxeReel`
+- `Odin` → `PrimeFrame`
+- `Kraken` → `DeepReel`
+- `Hydra` → `HydraFrame`
+- `Cerberus` → `GuardReel`
 
 ## Importante
 
