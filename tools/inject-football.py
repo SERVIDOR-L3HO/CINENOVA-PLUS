@@ -104,25 +104,40 @@ def main() -> None:
         home.write_text(home_text.replace(worker_block, "", 1))
 
     delayed_loader = smali / "h7/i2.smali"
-    replace_once(
-        delayed_loader,
-        """    invoke-virtual {v0}, Ly3/j;->R()V
-
-    .line 130
-    goto :goto_2
-""",
-        """    invoke-virtual {v0}, Ly3/j;->R()V
-
-    new-instance v2, Lcom/dpsteam/filmplus/tools/FootballFeed;
+    delayed_text = delayed_loader.read_text()
+    tv_worker_marker = "    invoke-virtual {v0}, Ly3/j;->R()V"
+    tv_worker = """    new-instance v2, Lcom/dpsteam/filmplus/tools/FootballFeed;
     invoke-direct {v2, v0}, Lcom/dpsteam/filmplus/tools/FootballFeed;-><init>(Ly3/j;)V
     new-instance v3, Ljava/lang/Thread;
     invoke-direct {v3, v2}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
     invoke-virtual {v3}, Ljava/lang/Thread;->start()V
+"""
+    if "Lcom/dpsteam/filmplus/tools/FootballFeed;" not in delayed_text:
+        if tv_worker_marker not in delayed_text:
+            raise SystemExit(f"Expected TV load call was not found: {delayed_loader}")
+        delayed_text = delayed_text.replace(
+            tv_worker_marker,
+            tv_worker_marker + "\n\n" + tv_worker,
+            1,
+        )
+        delayed_loader.write_text(delayed_text)
+    android_worker_block = """    invoke-virtual {v0}, Ly3/i;->S()V
 
-    .line 130
-    goto :goto_2
-""",
-    )
+    new-instance v2, Lcom/dpsteam/filmplus/tools/FootballFeedAndroid;
+    invoke-direct {v2, v0}, Lcom/dpsteam/filmplus/tools/FootballFeedAndroid;-><init>(Ly3/i;)V
+    new-instance v3, Ljava/lang/Thread;
+    invoke-direct {v3, v2}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
+    invoke-virtual {v3}, Ljava/lang/Thread;->start()V
+
+"""
+    delayed_text = delayed_loader.read_text()
+    if "Lcom/dpsteam/filmplus/tools/FootballFeedAndroid;" not in delayed_text:
+        anchor = "    invoke-virtual {v0}, Ly3/i;->S()V"
+        if anchor not in delayed_text:
+            raise SystemExit(f"Expected Android load call was not found: {delayed_loader}")
+        delayed_loader.write_text(
+            delayed_text.replace(anchor, android_worker_block.rstrip(), 1)
+        )
 
     click = smali / "z3/e0.smali"
     if "0x5f5f" not in click.read_text():
@@ -170,16 +185,18 @@ def main() -> None:
     if-ne v0, v1, :cond_0
 """,
         )
-    if '"const-string v1, "referer"' not in click.read_text():
-        replace_once(
-            click,
-        """    invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-    iget-object p1, v2, Lz3/g0;->e:Landroid/content/Context;""",
-        """    invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-    const-string v1, "referer"
-    const-string v3, "https://ultrago-xi.vercel.app/"
-    invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-    iget-object p1, v2, Lz3/g0;->e:Landroid/content/Context;""",
+    click_text = click.read_text()
+    if 'const-string v1, "referer"' not in click_text:
+        marker = "    invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;"
+        click.write_text(
+            click_text.replace(
+                marker,
+                marker
+                + '\n    const-string v1, "referer"\n'
+                + '    const-string v3, "https://ultrago-xi.vercel.app/"\n'
+                + '    invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;',
+                1,
+            )
         )
 
     card = root / "res/layout/media_raw.xml"
@@ -199,11 +216,24 @@ def main() -> None:
     for rel in (
         "smali/com/dpsteam/filmplus/tools/FootballFeed.smali",
         "smali/com/dpsteam/filmplus/tools/FootballFeedUpdate.smali",
+        "smali/com/dpsteam/filmplus/tools/FootballFeedAndroidUpdate.smali",
     ):
         source = Path(__file__).resolve().parents[1] / "apk-edit" / rel
         destination = root / rel
         destination.parent.mkdir(parents=True, exist_ok=True)
         destination.write_text(source.read_text())
+
+    # The TV home is Ly3/j, while the normal Android home is Ly3/i.  Keep the
+    # feed parser shared by generating a descriptor-only Android variant from
+    # the checked-in TV implementation, but give Android its own UI update
+    # runnable because its adapter is z3/s rather than z3/w.
+    feed_source = Path(__file__).resolve().parents[1] / "apk-edit" / "smali/com/dpsteam/filmplus/tools/FootballFeed.smali"
+    feed_android = (
+        feed_source.read_text()
+        .replace("FootballFeed", "FootballFeedAndroid")
+        .replace("Ly3/j", "Ly3/i")
+    )
+    (root / "smali/com/dpsteam/filmplus/tools/FootballFeedAndroid.smali").write_text(feed_android)
 
 
 if __name__ == "__main__":

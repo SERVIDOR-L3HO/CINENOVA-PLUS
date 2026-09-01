@@ -1,3 +1,4 @@
 - [APK signing continuity](apk-signing.md) — the imported recovery APK has no private keystore, so rebuilt files need a new key unless the owner supplies it.
 - [APK build tools](apk-build-tools.md) — this runner may lack apksigner and zipalign; validate rebuilt APKs with the available Java signing path.
 - [Transparent Android server icons](server-icons.md) — ImageMagick option order matters; verify alpha after rasterizing and after APK rebuild.
+- [APK patch anchors](apk-patch-anchors.md) — apktool rewrites smali formatting, so rebuild injectors should anchor on stable instructions rather than exact multi-line blocks.
