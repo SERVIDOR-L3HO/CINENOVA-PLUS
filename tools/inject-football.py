@@ -19,12 +19,100 @@ def replace_once(path: Path, old: str, new: str) -> None:
     path.write_text(text.replace(old, new, 1))
 
 
+def keep_info_screen_open(root: Path) -> None:
+    """Do not close the details screen when a metadata request fails.
+
+    The recovered app used to finish both details activities from their
+    network/JSON error callbacks.  On a normal phone this looked like a card
+    tap that opened the details screen for a moment and then returned home.
+    Keep the activity alive and show the same connection error toast used by
+    the other callbacks.
+    """
+
+    callbacks = (
+        (
+            root / "smali/com/dpsteam/filmplus/activities/n.smali",
+            "Lcom/dpsteam/filmplus/activities/n;->b:Lcom/dpsteam/filmplus/activities/InfoActivity;",
+            1,
+        ),
+        (
+            root / "smali/com/dpsteam/filmplus/activities/r.smali",
+            "Lcom/dpsteam/filmplus/activities/r;->b:Lcom/dpsteam/filmplus/activities/InfoActivity2;",
+            2,
+        ),
+    )
+    for path, activity_field, callback_index in callbacks:
+        text = path.read_text()
+        if f"info_details_keep_open_{callback_index}" in text:
+            continue
+
+        network_error = f"""    :pswitch_0
+    invoke-virtual {{p1}}, Ljava/lang/Throwable;->printStackTrace()V
+
+    .line 31
+    iget-object p1, p0, {activity_field}
+
+    .line 33
+    invoke-virtual {{p1}}, Landroid/app/Activity;->finish()V
+"""
+        if network_error not in text:
+            raise SystemExit(
+                f"Expected details network error anchor was not found: {path}"
+            )
+        network_replacement = f"""    :pswitch_0
+    invoke-virtual {{p1}}, Ljava/lang/Throwable;->printStackTrace()V
+
+    .line 31
+    iget-object p1, p0, {activity_field}
+
+    # info_details_keep_open_{callback_index}
+    invoke-virtual {{p1}}, Landroidx/appcompat/app/AppCompatActivity;->getResources()Landroid/content/res/Resources;
+    move-result-object v0
+    const v1, 0x7f110107
+    invoke-virtual {{v0, v1}}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    move-result-object v0
+    const/4 v1, 0x1
+    invoke-static {{p1, v0, v1}}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
+    move-result-object p1
+    invoke-virtual {{p1}}, Landroid/widget/Toast;->show()V
+"""
+        text = text.replace(network_error, network_replacement, 1)
+
+        if "InfoActivity;" in activity_field:
+            detail_error = """    invoke-virtual {v1}, Landroid/app/Activity;->finish()V
+
+    .line 273
+    :goto_2
+"""
+            detail_replacement = """    # Keep the details screen visible when metadata JSON is incomplete.
+    .line 273
+    :goto_2
+"""
+        else:
+            detail_error = """    invoke-virtual {v1}, Landroid/app/Activity;->finish()V
+
+    .line 331
+    :goto_4
+"""
+            detail_replacement = """    # Keep the details screen visible when metadata JSON is incomplete.
+    .line 331
+    :goto_4
+"""
+        if detail_error not in text:
+            raise SystemExit(
+                f"Expected details JSON error anchor was not found: {path}"
+            )
+        path.write_text(text.replace(detail_error, detail_replacement, 1))
+
+
 def main() -> None:
     if len(sys.argv) != 2:
         raise SystemExit("usage: inject-football.py <decoded-apk-directory>")
 
     root = Path(sys.argv[1]).resolve()
     smali = root / "smali"
+
+    keep_info_screen_open(root)
 
     media = smali / "com/dpsteam/filmplus/objects/Media.smali"
     replace_once(
