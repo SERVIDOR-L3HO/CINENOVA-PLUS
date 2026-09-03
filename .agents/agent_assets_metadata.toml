@@ -266,3 +266,17 @@ mtime_ms = 1788273964352
 storage_uri = "gcs://replit-rams-assets-reed/rams/assets/repl:827fa451-ca0d-4dbf-81f8-957a123c0ee0/823721b3-fcdf-44c9-9736-747b1cd0ec07/86665673-9658-4798-b5bf-2f898124c46c"
 storage_version_token = "1788274018775158"
 content_type = "application/octet-stream"
+
+[[outputs]]
+id = "GL9nPkecTiv0poeFAHN0G"
+uri = "file://CINENOVA-BLUE2_android-football-fixed-resolved.apk"
+type = "unspecified"
+title = "CINENOVA BLUE — reproductor HLS corregido"
+description = "APK de prueba firmado con una clave de recuperación. La ruta Android ahora resuelve los enlaces PHP/iframe hasta una URL HLS .m3u8 antes de entregarla a ExoPlayer."
+logical_id = "ea864800-650a-4621-9a81-363310d340f1"
+content_hash = "sha256:c21321706737066b66c002f5710a5683dcad700db8222055b51cbc83f6272f4b"
+size = 20111034
+mtime_ms = 1788466216650
+storage_uri = "gcs://replit-rams-assets-reed/rams/assets/repl:c19d4c28-8a4e-4806-88af-1572a362f90a/ea864800-650a-4621-9a81-363310d340f1/a92030cc-fd5c-4e8b-8599-2572117818ac"
+storage_version_token = "1788466289081874"
+content_type = "application/octet-stream"
