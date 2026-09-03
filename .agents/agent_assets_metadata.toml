@@ -280,3 +280,17 @@ mtime_ms = 1788466216650
 storage_uri = "gcs://replit-rams-assets-reed/rams/assets/repl:c19d4c28-8a4e-4806-88af-1572a362f90a/ea864800-650a-4621-9a81-363310d340f1/a92030cc-fd5c-4e8b-8599-2572117818ac"
 storage_version_token = "1788466289081874"
 content_type = "application/octet-stream"
+
+[[outputs]]
+id = "c44Hbbq1R_cAD_ds9FuU2"
+uri = "file://CINENOVA-BLUE2_android-football-fixed-resolved-headers.apk"
+type = "unspecified"
+title = "CINENOVA BLUE2 — APK corregida"
+description = "APK reconstruida y firmada con la clave de recuperación anterior. Incluye resolución HLS para Android, Referer/Origin del proveedor tvf90.com y protección contra encabezados vacíos en MediaActivity."
+logical_id = "0b8b682b-757f-4009-9ef0-6c23d571f2d2"
+content_hash = "sha256:4f5cdbf3cea5f5cc0e9fa7b4b873b5101fb60212eb1f11ae5987e065af6c12ab"
+size = 20111185
+mtime_ms = 1788468442667
+storage_uri = "gcs://replit-rams-assets-reed/rams/assets/repl:c19d4c28-8a4e-4806-88af-1572a362f90a/0b8b682b-757f-4009-9ef0-6c23d571f2d2/ff751a0d-f4c7-4cf1-be26-0b01e17e53ea"
+storage_version_token = "1788468704687724"
+content_type = "application/octet-stream"
