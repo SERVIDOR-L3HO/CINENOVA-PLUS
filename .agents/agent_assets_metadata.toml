@@ -336,17 +336,3 @@ mtime_ms = 1788541866351
 storage_uri = "gcs://replit-rams-assets-riker/rams/assets/repl:1df7ccae-0f6e-4e9f-8c30-c52b66232a6d/11041054-7a10-47e8-b2ec-50bb1b7129c3/9991adaa-1f1d-454d-89da-41c5d188e532"
 storage_version_token = "1788541882940057"
 content_type = "application/octet-stream"
-
-[[outputs]]
-id = "wdhFCHg57kQdcQC-rS_oF"
-uri = "file://CINENOVA-BLUE2_android-football-local-logos-tv-signed.apk"
-type = "unspecified"
-title = "CINENOVA BLUE — APK corregida sin crash de TV"
-description = "Versión corregida: el adaptador de TV ya no intenta usar el listener de foco como cargador de imágenes cuando encuentra un logo local. Incluye logos transparentes ampliados, conserva la hora en las tarjetas y usa la misma clave de firma que la versión anterior."
-logical_id = "b8675340-0702-4c60-b234-39bc7f93fab0"
-content_hash = "sha256:ab1b3d2088d272443bee0601fa49aa013e949ec8dfc25b4746e469dc325b83ff"
-size = 20441892
-mtime_ms = 1788543993186
-storage_uri = "gcs://replit-rams-assets-riker/rams/assets/repl:1df7ccae-0f6e-4e9f-8c30-c52b66232a6d/b8675340-0702-4c60-b234-39bc7f93fab0/80637a4e-3b25-453c-af37-8c6a793ce1ed"
-storage_version_token = "1788544000694773"
-content_type = "application/octet-stream"
