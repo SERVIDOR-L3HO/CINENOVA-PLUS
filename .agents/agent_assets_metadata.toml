@@ -322,3 +322,17 @@ mtime_ms = 1788538802383
 storage_uri = "gcs://replit-rams-assets-reed/rams/assets/repl:c19d4c28-8a4e-4806-88af-1572a362f90a/a642db36-cfe7-471d-9aa3-9edcecf1647c/cdda9e32-b5bf-48d5-b38c-f66a616ea4e4"
 storage_version_token = "1788538821922215"
 content_type = "application/octet-stream"
+
+[[outputs]]
+id = "8_pF_WboB3sHUPG8VNuV5"
+uri = "file://CINENOVA-BLUE2_android-football-logos-hora-tv-signed.apk"
+type = "unspecified"
+title = "CINENOVA BLUE — logos y hora en fútbol"
+description = "APK editada para Android y TV: usa directamente el logoUrl de la API y muestra la hora al inicio de cada tarjeta deportiva. Está firmada con una clave nueva de recuperación; debe instalarse como aplicación nueva si la instalación anterior usa otra firma."
+logical_id = "11041054-7a10-47e8-b2ec-50bb1b7129c3"
+content_hash = "sha256:5b5e111a89a121a745605319e243a2b845dd2ca7953dfeb6d9ac9dd9ddbf8383"
+size = 20111213
+mtime_ms = 1788541866351
+storage_uri = "gcs://replit-rams-assets-riker/rams/assets/repl:1df7ccae-0f6e-4e9f-8c30-c52b66232a6d/11041054-7a10-47e8-b2ec-50bb1b7129c3/9991adaa-1f1d-454d-89da-41c5d188e532"
+storage_version_token = "1788541882940057"
+content_type = "application/octet-stream"

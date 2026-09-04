@@ -3,6 +3,7 @@
 Este proyecto conserva únicamente la aplicación Android recuperada:
 
 - `CINENOVA-BLUE2_android-football-fixed-tv-crash-fix-signed.apk` — APK de prueba con reproducción directa de partidos Android y protección contra el cierre de `MediaActivity` cuando ExoPlayer informa un error.
+- `CINENOVA-BLUE2_android-football-logos-hora-tv-signed.apk` — versión editada para Android y TV que carga directamente el `logoUrl` de la API y coloca la `hora` al principio de cada tarjeta deportiva.
 
 ## Importante
 
@@ -39,3 +40,13 @@ un cierre por referencia nula.
 En Android, el adaptador del carrusel usa una ruta distinta a la de TV. Esta versión
 también reconoce los partidos de fútbol en esa ruta y abre directamente el reproductor,
 sin pasar por `InfoActivity`.
+
+## Logos y horarios del carrusel
+
+La API `https://ultrago-xi.vercel.app/gol-3` entrega los campos `hora` y `logoUrl`.
+La versión `*-logos-hora-tv-signed.apk` usa la URL absoluta de `logoUrl` sin anteponer
+la ruta de posters de TMDB, y muestra la hora antes del nombre del evento en las
+tarjetas de Android y TV. El endpoint actual entrega un solo logo por evento,
+normalmente de la liga o del país; no entrega `equipo1Logo` y `equipo2Logo`
+individuales, por lo que esta versión no puede mostrar dos escudos específicos
+por partido sin ampliar la fuente de datos.
