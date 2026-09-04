@@ -4,7 +4,7 @@ Este proyecto conserva únicamente la aplicación Android recuperada:
 
 - `CINENOVA-BLUE2_android-football-fixed-tv-crash-fix-signed.apk` — APK de prueba con reproducción directa de partidos Android y protección contra el cierre de `MediaActivity` cuando ExoPlayer informa un error.
 - `CINENOVA-BLUE2_android-football-logos-hora-tv-signed.apk` — versión editada para Android y TV que carga directamente el `logoUrl` de la API y coloca la `hora` al principio de cada tarjeta deportiva.
-- `CINENOVA-BLUE2_android-football-local-logos-tv-signed.apk` — versión recomendada: incluye copias locales ampliadas y transparentes de todos los logos de país/competición actuales, para que también se vean en TV aunque falle la descarga remota.
+- `CINENOVA-BLUE2_android-football-local-logos-tv-signed.apk` — versión recomendada: incluye copias locales ampliadas y transparentes de todos los logos de país/competición actuales, para que también se vean en TV aunque falle la descarga remota. Incluye además la corrección del crash causado por el enlace del cargador local.
 
 ## Importante
 
