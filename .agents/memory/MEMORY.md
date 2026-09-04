@@ -6,3 +6,4 @@
 - [HLS live duration guard](hls-live-duration.md) — live playlists expose a short sliding duration; do not classify that window as a failed short video.
 - [Football playback error path](football-playback-error-path.md) — football MediaActivity has no WebResult; generic retry handlers must null-check before dereferencing it.
 - [Android football adapter](android-football-adapter.md) — Android and TV use different carousel click handlers; both need an explicit football playback branch.
+- [Football logo assets](football-logo-assets.md) — TV may need bundled transparent country/competition logos because the remote image path can fall back while Android succeeds.
