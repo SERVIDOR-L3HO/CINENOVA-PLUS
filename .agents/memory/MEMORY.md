@@ -5,3 +5,4 @@
 - [Details error handling](details-error-handling.md) — metadata failures must preserve the movie details activity instead of finishing back to the home screen.
 - [HLS live duration guard](hls-live-duration.md) — live playlists expose a short sliding duration; do not classify that window as a failed short video.
 - [Football playback error path](football-playback-error-path.md) — football MediaActivity has no WebResult; generic retry handlers must null-check before dereferencing it.
+- [Android football adapter](android-football-adapter.md) — Android and TV use different carousel click handlers; both need an explicit football playback branch.

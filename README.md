@@ -2,7 +2,7 @@
 
 Este proyecto conserva únicamente la aplicación Android recuperada:
 
-- `CINENOVA-BLUE2_android-football-fixed-tv-crash-fix-signed.apk` — APK de prueba que evita el cierre de `MediaActivity` cuando ExoPlayer informa un error en una transmisión de fútbol.
+- `CINENOVA-BLUE2_android-football-fixed-tv-crash-fix-signed.apk` — APK de prueba con reproducción directa de partidos Android y protección contra el cierre de `MediaActivity` cuando ExoPlayer informa un error.
 
 ## Importante
 
@@ -35,3 +35,7 @@ Cuando una transmisión falla, la ruta de fútbol no tiene el objeto `WebResult`
 usa el manejador genérico de errores para probar servidores alternativos. La variante
 `*-tv-crash-fix-signed.apk` detecta ese caso y muestra el diálogo de error sin provocar
 un cierre por referencia nula.
+
+En Android, el adaptador del carrusel usa una ruta distinta a la de TV. Esta versión
+también reconoce los partidos de fútbol en esa ruta y abre directamente el reproductor,
+sin pasar por `InfoActivity`.
