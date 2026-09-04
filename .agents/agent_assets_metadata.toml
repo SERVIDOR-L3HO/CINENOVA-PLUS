@@ -308,3 +308,17 @@ mtime_ms = 1788531019496
 storage_uri = "gcs://replit-rams-assets-reed/rams/assets/repl:c19d4c28-8a4e-4806-88af-1572a362f90a/67d81d79-17f6-4f03-9d8c-cacd1e3e9662/4ee86322-6c64-4e0c-925f-0d49b8e81853"
 storage_version_token = "1788531069887880"
 content_type = "application/octet-stream"
+
+[[outputs]]
+id = "9D2HdoIdVlVRdt49yvqhY"
+uri = "file://CINENOVA-BLUE2_android-football-fixed-tv-crash-fix-signed.apk"
+type = "unspecified"
+title = "CINENOVA BLUE — corrección del crash de TV"
+description = "APK reconstruido y firmado. Protege el callback de errores de ExoPlayer cuando una transmisión de fútbol no tiene metadatos de película, evitando el cierre de MediaActivity y el regreso inesperado al splash."
+logical_id = "a642db36-cfe7-471d-9aa3-9edcecf1647c"
+content_hash = "sha256:2b7f8fbc9132d096fc5edb09e8833274662125d4ae94a1ce7c8ede49a50a074a"
+size = 20110901
+mtime_ms = 1788535703509
+storage_uri = "gcs://replit-rams-assets-reed/rams/assets/repl:c19d4c28-8a4e-4806-88af-1572a362f90a/a642db36-cfe7-471d-9aa3-9edcecf1647c/068f5992-3e08-4ced-a464-2e6205210c44"
+storage_version_token = "1788535752257690"
+content_type = "application/octet-stream"
