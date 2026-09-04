@@ -2,10 +2,6 @@
 
 Este proyecto conserva únicamente la aplicación Android recuperada:
 
-- `CINENOVA-BLUE2_sign.apk` — APK instalable de CINENOVA BLUE.
-- `CINENOVA-BLUE2_android-football-fixed.apk` — APK de prueba con el carrusel de fútbol habilitado también en Android y con resolución de enlaces del reproductor.
-- `CINENOVA-BLUE2_android-football-fixed-resolved.apk` — APK de prueba con la resolución HLS aplicada también a la ruta Android.
-- `CINENOVA-BLUE2_android-football-fixed-live-signed.apk` — APK de prueba que además evita que el detector de vídeos cortos rechace la ventana de una transmisión HLS en vivo.
 - `CINENOVA-BLUE2_android-football-fixed-tv-crash-fix-signed.apk` — APK de prueba que evita el cierre de `MediaActivity` cuando ExoPlayer informa un error en una transmisión de fútbol.
 
 ## Importante
