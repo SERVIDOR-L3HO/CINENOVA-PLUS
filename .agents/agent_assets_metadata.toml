@@ -294,3 +294,17 @@ mtime_ms = 1788468442667
 storage_uri = "gcs://replit-rams-assets-reed/rams/assets/repl:c19d4c28-8a4e-4806-88af-1572a362f90a/0b8b682b-757f-4009-9ef0-6c23d571f2d2/ff751a0d-f4c7-4cf1-be26-0b01e17e53ea"
 storage_version_token = "1788468704687724"
 content_type = "application/octet-stream"
+
+[[outputs]]
+id = "GCEg5jqSHmF1gxGptam5T"
+uri = "file://CINENOVA-BLUE2_android-football-fixed-live-signed.apk"
+type = "unspecified"
+title = "CINENOVA BLUE — corrección HLS en vivo"
+description = "APK reconstruido y firmado para prueba. Evita que la ventana corta de una playlist HLS en vivo sea rechazada como un vídeo corto. Requiere instalarse como aplicación nueva si la firma de la versión instalada es diferente."
+logical_id = "67d81d79-17f6-4f03-9d8c-cacd1e3e9662"
+content_hash = "sha256:bd45d4dd4449a0bcc5cbc6547a7c9e03d01ac89903bd8f12f0bbf8efd1f2b141"
+size = 20110964
+mtime_ms = 1788531019496
+storage_uri = "gcs://replit-rams-assets-reed/rams/assets/repl:c19d4c28-8a4e-4806-88af-1572a362f90a/67d81d79-17f6-4f03-9d8c-cacd1e3e9662/4ee86322-6c64-4e0c-925f-0d49b8e81853"
+storage_version_token = "1788531069887880"
+content_type = "application/octet-stream"

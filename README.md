@@ -5,6 +5,7 @@ Este proyecto conserva únicamente la aplicación Android recuperada:
 - `CINENOVA-BLUE2_sign.apk` — APK instalable de CINENOVA BLUE.
 - `CINENOVA-BLUE2_android-football-fixed.apk` — APK de prueba con el carrusel de fútbol habilitado también en Android y con resolución de enlaces del reproductor.
 - `CINENOVA-BLUE2_android-football-fixed-resolved.apk` — APK de prueba con la resolución HLS aplicada también a la ruta Android.
+- `CINENOVA-BLUE2_android-football-fixed-live-signed.apk` — APK de prueba que además evita que el detector de vídeos cortos rechace la ventana de una transmisión HLS en vivo.
 
 ## Importante
 
@@ -24,3 +25,11 @@ de ese iframe, la URL HLS `.m3u8`. La versión `*-resolved.apk` sigue el iframe,
 extrae la URL HLS temporal y se la entrega al reproductor ExoPlayer. La URL se
 resuelve al cargar el carrusel, por lo que requiere conexión activa y puede caducar
 cuando el proveedor renueve el token.
+
+## Corrección de transmisiones en vivo
+
+El reproductor original trataba como error cualquier fuente cuya duración reportada
+fuera menor de cinco minutos. Las playlists HLS en vivo normalmente reportan solo
+una ventana corta de segmentos, así que esa validación podía detener una transmisión
+válida. La versión `*-live-signed.apk` conserva esa validación para vídeos normales,
+pero la omite para fuentes `.m3u8`.

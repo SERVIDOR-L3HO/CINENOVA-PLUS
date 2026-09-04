@@ -3,3 +3,4 @@
 - [Transparent Android server icons](server-icons.md) — ImageMagick option order matters; verify alpha after rasterizing and after APK rebuild.
 - [APK patch anchors](apk-patch-anchors.md) — apktool rewrites smali formatting, so rebuild injectors should anchor on stable instructions rather than exact multi-line blocks.
 - [Details error handling](details-error-handling.md) — metadata failures must preserve the movie details activity instead of finishing back to the home screen.
+- [HLS live duration guard](hls-live-duration.md) — live playlists expose a short sliding duration; do not classify that window as a failed short video.
